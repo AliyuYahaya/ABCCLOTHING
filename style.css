@@ -340,7 +340,11 @@ footer p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.product-image img.fade-out {
+    opacity: 0;
 }
 
 .product-item:hover .product-image img {
@@ -366,17 +370,39 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
 .brand-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid rgba(198, 156, 109, 0.1);
+    border-radius: 4px;
     font-family: var(--font-heading);
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: 600;
     color: var(--color-text-secondary);
-    font-weight: 700;
-    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: var(--transition);
+    text-align: center;
+    padding: 15px;
+    cursor: default;
+}
+
+.brand-name:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    box-shadow: var(--shadow-card);
+    background: rgba(17, 34, 64, 0.8);
+    opacity: 1;
 }
 
 /* Contact Page specific */
